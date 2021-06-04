@@ -6,3 +6,4 @@
 git rm --cached MONEY.xlsx
 git rm --cached *.xlsx
 MONEY.xlsx
+*.xlsx
