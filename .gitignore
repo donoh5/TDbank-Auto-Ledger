@@ -2,4 +2,6 @@
 *.csv
 *.csv
 *.xlsx
--MONEY.xlsx
+MONEY.xlsx
+
+git rm --cached MONEY.xlsx
