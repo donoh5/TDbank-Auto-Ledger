@@ -7,7 +7,7 @@ file_list = os.listdir(path_folder)
 
 
 def save_loop(file_name):
-    ledger = load_workbook('MONEY.xlsx')
+    ledger = load_workbook('MYMONEY.xlsx')
     main_df = pd.read_csv(path_folder + "\\" + file_name, names=['date', 'name', 'in', 'out', 'total'])
     main_df[['month', 'day', 'year']] = main_df.date.str.split("/", expand=True,)
     main_df.fillna(0, inplace=True)
@@ -41,7 +41,7 @@ def save_loop(file_name):
             cell_name = 'E' + str(col + 2)
             col_sheet[cell_name] = "=E%d-C%d+D%d" % (col + 1, col + 2, col + 2)
 
-    ledger.save('MONEY.xlsx')
+    ledger.save('MYMONEY.xlsx')
 
 
 for file_name in file_list:
